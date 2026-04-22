@@ -1,0 +1,24 @@
+global:
+  scrape_interval: 15s  
+  evaluation_interval: 15s
+  scrape_timeout: 10s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # rabbitmq per-object exporter
+  # plugin rabbitmq_prometheus should be enabled in RabbitMQ.
+  # The plugin exposes all RabbitMQ metrics on a dedicated TCP port usally :15692 and the metrics path is /metrics/per-object
+  # For more details, see https://www.rabbitmq.com/docs/prometheus
+  - job_name: rabbitmq-per-object
+    metrics_path: /metrics/per-object
+    scrape_interval: 30s
+    static_configs:
+      - targets: ['staging.local:15692']
+        labels:
+          env: staging
+      - targets: ['production.local:15692']
+        labels:
+          env: production
