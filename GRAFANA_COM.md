@@ -8,6 +8,22 @@ Built for on-call engineers and service owners who need to answer questions like
 
 ---
 
+## Screenshots
+
+**Queue state** — depth, ready, unacked, consumers. Filter bar at the top drives every panel below.
+
+![Queue state — depth, ready, unacked, consumers](https://raw.githubusercontent.com/SonyCore/rabbitmq-per-object-dashboard/main/screenshots/screenshot-1.png)
+
+**Queue health + rates** — backlog/consumer drain-timer, publish/deliver/ack rates, and redelivery rate.
+
+![Queue health and rates](https://raw.githubusercontent.com/SonyCore/rabbitmq-per-object-dashboard/main/screenshots/screenshot-2.png)
+
+**Exchange + exchange → queue routing** — publish/confirm rates, unroutable dropped/returned, and per-binding routing rate.
+
+![Exchange metrics and routing](https://raw.githubusercontent.com/SonyCore/rabbitmq-per-object-dashboard/main/screenshots/screenshot-3.png)
+
+---
+
 ## Prerequisites
 
 - **RabbitMQ** with the `rabbitmq_prometheus` plugin enabled:

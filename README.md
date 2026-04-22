@@ -27,6 +27,22 @@ It is built for on-call engineers and service owners who need to answer question
 
 ---
 
+## Screenshots
+
+**Queue state** — depth, ready, unacked, consumers. Filter bar at the top drives every panel below.
+
+![Queue state — depth, ready, unacked, consumers](screenshots/screenshot-1.png)
+
+**Queue health + rates** — backlog/consumer drain-timer, publish/deliver/ack rates, and redelivery rate.
+
+![Queue health and rates](screenshots/screenshot-2.png)
+
+**Exchange + exchange → queue routing** — publish/confirm rates, unroutable dropped/returned, and per-binding routing rate.
+
+![Exchange metrics and routing](screenshots/screenshot-3.png)
+
+---
+
 ## Panels
 
 ### QUEUE — `$queue`
